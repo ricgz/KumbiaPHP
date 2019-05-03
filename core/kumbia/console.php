@@ -157,11 +157,11 @@ class Console
         // define el path de la aplicacion
         define('APP_PATH', rtrim($dir, '/') . '/');
 
-        // lee la configuracion
-        $config = Config::read('config');
-
+        // lee la configuracion 
+        //$config = Config::read('config');
+        // ****** parametro production no existe en config.php ******
         // constante que indica si la aplicacion se encuentra en produccion
-        define('PRODUCTION', $config['application']['production']);
+        //define('PRODUCTION', $config['application']['production']);
 
         // crea la consola
         $console = self::load($console_name);
